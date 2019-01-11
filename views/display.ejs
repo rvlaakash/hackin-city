@@ -1,0 +1,54 @@
+<html>
+    <title>Display Devloper</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+            <style>
+                        body
+                        {
+                            background-image: url("../images/20181209_132.jpg" );
+                            background-size: 1380px 800px;
+                            
+                        
+                        }
+                        </style>
+<body>
+
+<%- include('header'); -%>
+
+        <h1>Display Table</h1>
+
+        <% if(user_array.length>0) { %>
+
+           <table border="2">
+               <tr>
+                   <th>ID</th> 
+                   <th>Name</th>
+                   <th>Email</th>
+                   <th>Mobile No.</th>
+                   <th>Collage</th>
+                   <th>University</th>
+                   <th>Team Name</th>
+                   <th>Team Id</th>
+                </tr>
+                
+          <% for(var i=0 ; i<user_array.length ; i++) { %>
+            <tr>
+                  <td><%= i+1 %></td>
+                  <td><%=user_array[i].user_name %></td>
+                  <td><a href="mailto:<%=user_array[i].user_email %>"><%=user_array[i].user_email %></a></td>
+                  <td><%=user_array[i].user_mobile %></td>
+                  <td><%=user_array[i].user_collage %></td>
+                  <td><%=user_array[i].user_university %></td>
+                  <td><%=user_array[i].user_team_name %></td>
+                  <td><%=user_array[i].user_team_id %></td>
+                  
+            </tr>
+
+                
+          <% } %>
+           </table>
+        <% } else { %>
+             No Record Found..
+        <% } %>     
+        <%- include('footer')-%>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>ADD USER</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <%-include('header')-%>
+        <h3 style="color:red">Note : ( Before Submit Form Check the other participants Details and Choose Unique Team-ID and Team-name. )</h3>
+        <div>
+            <form method="POST" action="/add-user">
+                Name : <input type="text" name="name"/><br/><br/>
+                Email : <input type="email" name="email"/><br/><br/>
+                Number : <input type="text" name="number"/><br/><br/>
+                Collage Name : <input type="text" name="collage"/><br/><br/>
+                University : <input type="text" name="university"/><br/><br/>
+                Team Name (same in all Team Members) : <input type="text" name="team_name"/><br/><br/>
+                Team id (same in all Team Members) : <input type="text" name="team_id"/><br/><br/>
+                
+                <input type="submit" name="submit" class="button button2" /><br/><br/>
+            </form>
+        </div>
+        <%- include('footer')-%>
+    </body>
+</html>

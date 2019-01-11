@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Edit Devloper</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+      </head>
+<body>
+    <%- include('header');  -%>
+        <form method="post">
+        <table border="1">
+               
+                  <tr>
+                      <th>Name</th>
+                      <td><input type="text" name="user_name"
+                           value=" <%= user_array.user_name %> " required> </td>
+
+                  </tr>
+                  <tr>
+                        <th>email</th>
+                        <td><input type="text" name="user_email"
+                             value=" <%= user_array.user_email %> " required> </td>
+  
+                    </tr>
+                  <tr>
+                        <th>Mobile</th>
+                        <td><input type="text" name="user_mobile"
+                             value=" <%= user_array.user_mobile %> " required> </td>
+  
+                    </tr>
+                    <tr>
+                        <th>Collage Name </th>
+                        <td><input type="text" name="user_collage"
+                             value=" <%= user_array.user_collage %> " required> </td>
+  
+                    </tr>
+                    <tr>
+                        <th>University</th>
+                        <td><input type="text" name="user_university"
+                             value=" <%= user_array.user_university %> " required> </td>
+  
+                    </tr>
+                    <tr>
+                        <th>Team Name</th>
+                        <td><input type="text" name="user_team_name"
+                             value=" <%= user_array.user_team_name %> " required> </td>
+  
+                    </tr>
+                    <tr>
+                        <th>Team Id</th>
+                        <td><input type="text" name="user_team_id"
+                             value=" <%= user_array.user_team_id %> " required> </td>
+  
+                    </tr>
+                    <tr>
+                            
+                            <td>
+                            </td><td><input type="submit" class="button button2"><input type="button" value="Display"
+                                onclick="window.location='/display-user';" class="button button2" style="float:right"></td>
+                        </tr>
+         
+             </table>
+        </form>
+        <%- include('footer')-%>
+    </body>
+</html>
